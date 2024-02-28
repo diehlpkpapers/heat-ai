@@ -1,0 +1,45 @@
+const L: real = 1.0;        // Length of the rod
+const T: real = 0.5;        // Total time
+const Nx: int = 100;        // Number of grid points in space
+const Nt: int = 1000;       // Number of time steps
+const Alpha: real = 0.01;   // Thermal diffusivity
+const Dx: real = L / Nx;    // Spatial step size
+const Dt: real = T / Nt;    // Time step size
+
+// Function to perform one time step of the finite difference scheme
+proc heatEqnStep(u: [0..Nx] real) {
+  var newU: [0..Nx] real;
+  for i in 1..Nx {
+    newU[i] = u[i] + Alpha * Dt / (Dx * Dx) * (u[i-1] - 2.0 * u[i] + u[i+1]);
+  }
+  return newU;
+}
+
+// Main function
+proc main() {
+  var u: [0..Nx] real;
+  var start_index = 0.4 / Dx;
+  var end_index = 0.6 / Dx;
+  for i in 1..Nx {
+    if start_index <= i && i <= end_index {
+      u[i] = 1.0; // Initial temperature profile (step function)
+    } else {
+      u[i] = 0.0;
+    }
+  }
+
+  // Solve heat equation using finite differences in parallel
+  for _ in 1..Nt {
+    u = heatEqnStep(u);
+  }
+
+  // Print final temperature distribution
+  writeln("Final Temperature Distribution:");
+  for i in 1..Nx {
+    writeln("Node ", i, ": Temperature = ", u[i]);
+  }
+}
+
+// Run main function
+main();
+
