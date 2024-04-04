@@ -13,7 +13,7 @@ def parallel_heat_equation(u0, alpha, L, T, Nx, Nt, num_workers):
     dt = T / Nt
     dx2 = dx**2
     u = np.zeros(Nx + 1)
-    u[1:Nx] = u0
+    u[1:Nx] = u0[1:Nx]
     
     pool = Pool(processes=num_workers)
     segment_size = Nx // num_workers
