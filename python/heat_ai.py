@@ -10,7 +10,7 @@ Nt = 1000        # Number of time steps
 alpha = 0.01     # Thermal diffusivity
 dx = L / Nx      # Spatial step size
 dt = T / Nt      # Time step size
-num_cores = 4    # Number of CPU cores
+num_cores = 3    # Number of CPU cores
 
 # Initialize temperature distribution
 u = np.zeros(Nx+1)
