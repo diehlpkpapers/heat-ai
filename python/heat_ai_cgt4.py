@@ -59,3 +59,12 @@ u0 = np.sin(np.pi * x / L)
 u_final = parallel_heat_equation(u0, alpha, L, T, Nx, Nt, num_workers)
 
 # u_final now contains the solution at T
+# Plot final temperature distribution
+plt.figure(figsize=(8, 6))
+plt.plot(np.linspace(0, L, Nx+1), u_final, label='Final')
+plt.xlabel('Position')
+plt.ylabel('Temperature')
+plt.title('Final Temperature Distribution')
+plt.grid(True)
+plt.legend()
+plt.show()
