@@ -1,5 +1,6 @@
 import numpy as np
 from multiprocessing import Pool
+import matplotlib.pyplot as plt
 
 def update_segment(args):
     u, alpha, dx2, dt, start, end = args
