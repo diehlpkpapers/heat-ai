@@ -19,7 +19,9 @@ u[int(0.4/dx):int(0.6/dx+1)] = 1.0  # Initial temperature profile (step function
 # Function to perform one time step of the finite difference scheme
 def heat_eqn_step(u, alpha, dx, dt, start, end):
     new_u = np.copy(u)
-    for i in range(start, end-1):
+    print(f"start:{start}, end:{end}")
+    for i in range(start, end):
+        print(f"i:{i}")
         new_u[i] = u[i] + alpha * dt / dx**2 * (u[i-1] - 2 * u[i] + u[i+1])
     return new_u
 
