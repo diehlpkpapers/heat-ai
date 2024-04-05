@@ -15,7 +15,7 @@ public class HeatEquationSolver {
 
     // Function to perform one time step of the finite difference scheme
     private static void heatEqnStep(double[] u, int start, int end) {
-        for (int i = start; i <= end; i++) {
+        for (int i = start+1; i <= end-1; i++) {
             u[i] += ALPHA * DT / (DX * DX) * (u[i - 1] - 2 * u[i] + u[i + 1]);
         }
     }
