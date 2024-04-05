@@ -37,7 +37,9 @@ public class HeatEquationSolver {
             int chunkSize = (Nx + 1) / NUM_THREADS;
             for (int i = 0; i < NUM_THREADS; i++) {
                 int start = i * chunkSize;
+                System.out.println("start:"+start);
                 int end = (i == NUM_THREADS - 1) ? Nx : (i + 1) * chunkSize - 1;
+                System.out.println("end:"+end);
                 executor.execute(() -> heatEqnStep(u, start, end));
             }
         }
