@@ -26,7 +26,7 @@ int main() {
 
     // Time-stepping loop
     for(int t = 0; t < Nt; ++t) {
-        #pragma omp parallel for default(none) shared(u, u_new, Nx, r)
+        #pragma omp parallel for default(none) shared(u, u_new)
         for(int i = 1; i < Nx-1; ++i) {
             u_new[i] = u[i] + r * (u[i-1] - 2*u[i] + u[i+1]);
         }
