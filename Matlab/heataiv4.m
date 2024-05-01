@@ -39,3 +39,8 @@ end
 
 % Close the parallel pool
 delete(pool);
+
+plot(x, u);
+title('Temperature distribution along the rod');
+xlabel('Position');
+ylabel('Temperature');
