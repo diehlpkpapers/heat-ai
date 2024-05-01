@@ -1,5 +1,5 @@
 #include <hpx/hpx_main.hpp>
-#include <hpx/include/iostreams.hpp>
+#include <iostream>
 #include <vector>
 
 // Parameters
@@ -35,9 +35,9 @@ int main() {
     }
 
     // Print final temperature distribution
-    hpx::cout << "Final Temperature Distribution:" << hpx::endl;
+    std::cout << "Final Temperature Distribution:" << std::endl;
     for (int i = 0; i <= Nx; ++i) {
-        hpx::cout << "Node " << i << ": Temperature = " << u[i] << hpx::endl;
+        std::cout << "Node " << i << ": Temperature = " << u[i] << std::endl;
     }
 
     return 0;
