@@ -1,2 +1,6 @@
+[package]
+name = "heat-ai"
+version = "0.1.0"
+
 [dependencies]
 rayon = "1.5.1"
