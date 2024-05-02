@@ -12,7 +12,7 @@ const DX: f64 = L / NX as f64;  // Spatial step size
 const DT: f64 = T / NT as f64;  // Time step size
 
 // Function to perform one time step of the finite difference scheme
-fn heat_eqn_step(u: Vec<f64>, start: usize, end: usize) {
+fn heat_eqn_step(u: &mut Vec<f64>, start: usize, end: usize) {
     let mut new_u = u.clone();
     for i in start..end {
         new_u[i] = u[i] + ALPHA * DT / DX.powi(2) * (u[i-1] - 2.0 * u[i] + u[i+1]);
@@ -35,7 +35,7 @@ fn main() {
             .for_each(|(idx, chunk)| {
                 let start = idx * chunk_size;
                 let end = start + chunk_size;
-                heat_eqn_step(u, start, end);
+                heat_eqn_step(chunk, start, end);
             });
     }
 
