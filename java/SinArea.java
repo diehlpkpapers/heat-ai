@@ -1,6 +1,6 @@
 import java.util.function.Function;
 
-public class Main {
+public class SinArea {
 
     // Define the function
     static double sinFunction(double x) {
