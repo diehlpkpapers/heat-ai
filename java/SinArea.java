@@ -25,7 +25,7 @@ public class SinArea {
 
         // Compute the definite integral using trapezoidal rule
         int numIntervals = 10000; // Increase this for higher accuracy
-        double area = integrate(Main::sinFunction, lowerLimit, upperLimit, numIntervals);
+        double area = integrate(SinArea::sinFunction, lowerLimit, upperLimit, numIntervals);
 
         System.out.printf("Area between -π and 2/3π for sin(x) = %.6f%n", area);
     }
