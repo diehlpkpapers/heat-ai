@@ -59,4 +59,11 @@ created by main.main
 	/work/diehlpk/heat-ai/go/heat-ai-v4.go:36 +0x1fa
 ```
 
+### Correctness
 
+```bash
+./cgm-ai
+Solution vector x:
+x[0] = 0.076317
+x[1] = 0.656810
+```

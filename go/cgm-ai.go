@@ -95,7 +95,7 @@ func main() {
 	b := []float64{1, 2}
 
 	// Tolerance for convergence
-	tol := 1e-6
+	tol := 1e-12
 
 	// Solve Ax = b
 	x := conjugateGradient(A, b, tol)
