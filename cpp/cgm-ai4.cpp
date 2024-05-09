@@ -77,14 +77,20 @@ void conjugateGradient(const std::vector<std::vector<double>>& A, const std::vec
 
 int main() {
     std::vector<std::vector<double>> A = {
-        {4, 1},
-        {1, 3}
+        {4, 1, 0},
+        {1, 3, -1},
+        {0, -1, 2}
     };
-    std::vector<double> b = {1, 2};
-    std::vector<double> x = {0, 0};  // Initial guess
+    std::vector<double> b = {1, 2, 3};
+    std::vector<double> x = {0, 0, 0};  // Initial guess
 
     conjugateGradient(A, b, x);
 
     std::cout << "Solution x: ";
-    for (const auto& xi :
+    for (const auto& xi : x) {
+        std::cout << xi << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
 }
