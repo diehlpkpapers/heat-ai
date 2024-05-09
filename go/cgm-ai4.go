@@ -91,3 +91,14 @@ func main() {
     b := []float64{1, 2, 3}
     tol := 1e-8
     maxIter := 1000
+
+    x := ConjugateGradient(A, b, tol, maxIter)
+
+    fmt.Println("Solution x:")
+    fmt.Println(x)
+
+    // Validate the solution
+    fmt.Println("A*x should be close to b:")
+    fmt.Println(matVecMul(A, x))
+}
+
