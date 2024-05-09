@@ -61,11 +61,11 @@ fn conjugate_gradient(A: &Matrix, b: &Vector, tol: f64) -> Vector {
 
 fn main() {
     let A = vec![
-        vec![4.0, 1.0, 0.0],
-        vec![1.0, 3.0, -1.0],
-        vec![0.0, -1.0, 2.0],
+        vec![4.0, 1.0],
+        vec![1.0, 3.0],
     ];
-    let b = vec![1.0, 2.0, 3.0];
+    let b = vec![1.0, 2.0];
+
     let tol = 1e-8;
 
     let x = conjugate_gradient(&A, &b, tol);

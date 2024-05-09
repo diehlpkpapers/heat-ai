@@ -1,5 +1,3 @@
-extern crate nalgebra;
-
 use nalgebra::{DVector, MatrixMN};
 
 // Function to perform matrix-vector multiplication: y = A*x
