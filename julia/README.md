@@ -98,3 +98,16 @@ Stacktrace:
     @ /work/diehlpk/heat-ai/julia/heat-ai-v4.jl:53
 in expression starting at /work/diehlpk/heat-ai/julia/heat-ai-v4.jl:53
 ```
+
+```bash
+julia cgm-ai4.jl
+ERROR: LoadError: UndefVarError: `dot` not defined
+Stacktrace:
+ [1] conjugateGradient(A::Matrix{Float64}, b::Vector{Float64}; tol::Float64, maxIter::Int64)
+   @ Main /work/diehlpk/heat-ai/julia/cgm-ai4.jl:6
+ [2] conjugateGradient(A::Matrix{Float64}, b::Vector{Float64})
+   @ Main /work/diehlpk/heat-ai/julia/cgm-ai4.jl:1
+ [3] top-level scope
+   @ /work/diehlpk/heat-ai/julia/cgm-ai4.jl:28
+in expression starting at /work/diehlpk/heat-ai/julia/cgm-ai4.jl:28
+```
