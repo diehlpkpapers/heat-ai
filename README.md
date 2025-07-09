@@ -5,4 +5,4 @@ This study evaluates the capabilities of ChatGPT versions 3.5 and 4 in generatin
 
 ## Publications
 
-* Diehl, P., Nader, N., Brandt, S., Kaiser, H. (2025). Evaluating AI-Generated Code for C++, Fortran, Go, Java, Julia, Matlab, Python, R, and Rust. In: Caino-Lores, S., et al. Euro-Par 2024: Parallel Processing Workshops. Euro-Par 2024. Lecture Notes in Computer Science, vol 15385. Springer, Cham. [https://doi.org/10.1007/978-3-031-90200-0_20](https://doi.org/10.1007/978-3-031-90200-0_20) [Preprint](https://arxiv.org/abs/2405.13101)
+* Diehl, P., Nader, N., Brandt, S., Kaiser, H. (2025). Evaluating AI-Generated Code for C++, Fortran, Go, Java, Julia, Matlab, Python, R, and Rust. In: Caino-Lores, S., et al. Euro-Par 2024: Parallel Processing Workshops. Euro-Par 2024. Lecture Notes in Computer Science, vol 15385. Springer, Cham. [10.1007/978-3-031-90200-0_20](https://doi.org/10.1007/978-3-031-90200-0_20) [Preprint](https://arxiv.org/abs/2405.13101)
